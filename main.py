@@ -12,3 +12,13 @@ for expense in expenses:
     
 
 print(total)
+
+def calculate_total(expenses):
+    total = 0
+    for expense in expenses:
+        total += expense
+    return total
+
+total = calculate_total(expenses)
+
+print("Total expenses:", total)
