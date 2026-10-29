@@ -12,11 +12,20 @@ def calculate_total(expenses):
         total += expense
     return total
 
-add_expense(expenses)
-add_expense(expenses)
-add_expense(expenses)
+while True:
+    print("1. Add expense")
+    print("2. Calculate total")
+    print("3. Exit")
+    choice = input("Enter your choice: ")
 
-total = calculate_total(expenses)
+    if choice == '1':
+        add_expense(expenses)
+    elif choice == '2':
+        total = calculate_total(expenses)
+        print("Total expenses:", total)
+    elif choice == '3':
+        break
+    else:
+        print("Invalid choice. Please try again.")
 
-print("Total expenses:", total)
 
